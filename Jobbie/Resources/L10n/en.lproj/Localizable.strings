@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Jobbie
+
+  Created by Ilia Gutu on 28.01.2022.
+  
+*/
+
+// MARK: - Home
+"home.title" = "Home";
+"home.emptyFeed" = "No offers available at the moment.";
+
+// MARK: - Offers
+
+"offers.fetching" = "Fetching Offers";
+
+
+// MARK: - Errors
+"action.retry" = "Retry";
+"error.fetch.title" = "Fetch error";
+"error.signin.title" = "Failed to sign-in";
+
+// MARK: - Alerts
+"alert.ok" = "OK";
+"alert.cancel" = "Cancel";
