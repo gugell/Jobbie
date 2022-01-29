@@ -562,7 +562,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 657ABEE927A3DD20009A12D0 /* Build configuration list for PBXNativeTarget "Jobbie" */;
 			buildPhases = (
+				657ABFB227A523E8009A12D0 /* Swiftgen */,
 				657ABEBB27A3DD1F009A12D0 /* Sources */,
+				657ABFB327A5240D009A12D0 /* Swiftlint */,
 				657ABEBC27A3DD1F009A12D0 /* Frameworks */,
 				657ABEBD27A3DD1F009A12D0 /* Resources */,
 			);
@@ -681,6 +683,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		657ABFB227A523E8009A12D0 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/.scripts/run-swiftgen.sh\n";
+		};
+		657ABFB327A5240D009A12D0 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/.scripts/run-swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		657ABEBB27A3DD1F009A12D0 /* Sources */ = {

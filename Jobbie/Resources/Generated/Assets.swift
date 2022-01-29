@@ -10,8 +10,8 @@
 #endif
 
 // Deprecated typealiases
-@available(*, deprecated, renamed: "ImageAsset.Image", message: "This typealias will be removed in SwiftGen 7.0")
-public typealias AssetImageTypeAlias = ImageAsset.Image
+@available(*, deprecated, renamed: "ColorAsset.Color", message: "This typealias will be removed in SwiftGen 7.0")
+public typealias AssetColorTypeAlias = ColorAsset.Color
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
@@ -19,48 +19,42 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Assets {
-  public static let defaultPlaceholder = ImageAsset(name: "default-placeholder")
-  public static let launchIcon = ImageAsset(name: "launch.icon")
+  public static let accentColor = ColorAsset(name: "AccentColor")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
-public struct ImageAsset {
+public final class ColorAsset {
   public fileprivate(set) var name: String
 
   #if os(macOS)
-  public typealias Image = NSImage
+  public typealias Color = NSColor
   #elseif os(iOS) || os(tvOS) || os(watchOS)
-  public typealias Image = UIImage
+  public typealias Color = UIColor
   #endif
 
-  public var image: Image {
-    let bundle = BundleToken.bundle
-    #if os(iOS) || os(tvOS)
-    let image = Image(named: name, in: bundle, compatibleWith: nil)
-    #elseif os(macOS)
-    let name = NSImage.Name(self.name)
-    let image = (bundle == .main) ? NSImage(named: name) : bundle.image(forResource: name)
-    #elseif os(watchOS)
-    let image = Image(named: name)
-    #endif
-    guard let result = image else {
-      fatalError("Unable to load image asset named \(name).")
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
+  public private(set) lazy var color: Color = {
+    guard let color = Color(asset: self) else {
+      fatalError("Unable to load color asset named \(name).")
     }
-    return result
+    return color
+  }()
+
+  fileprivate init(name: String) {
+    self.name = name
   }
 }
 
-public extension ImageAsset.Image {
-  @available(macOS, deprecated,
-    message: "This initializer is unsafe on macOS, please use the ImageAsset.image property")
-  convenience init?(asset: ImageAsset) {
-    #if os(iOS) || os(tvOS)
+public extension ColorAsset.Color {
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
+  convenience init?(asset: ColorAsset) {
     let bundle = BundleToken.bundle
+    #if os(iOS) || os(tvOS)
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
-    self.init(named: NSImage.Name(asset.name))
+    self.init(named: NSColor.Name(asset.name), bundle: bundle)
     #elseif os(watchOS)
     self.init(named: asset.name)
     #endif

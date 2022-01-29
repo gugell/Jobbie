@@ -45,7 +45,6 @@ final class AuthModulePresenter: AuthModuleViewOutput, AuthModuleInteractorOutpu
         }
     }
 
-
     func interactorDidFinishSignin() {
         UI { [weak self] in
             self?.router.navigateNext()
