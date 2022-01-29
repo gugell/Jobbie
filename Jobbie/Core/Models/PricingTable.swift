@@ -9,7 +9,7 @@
 import Foundation
 
 struct PricingTable: Codable {
-  
+
   var isSummary: Bool
   var times: Int?
   var minutes: Int
@@ -17,5 +17,5 @@ struct PricingTable: Codable {
   var unpaid: Bool
   var earningHourly: String
   var earningTotal: String
-  
+
 }

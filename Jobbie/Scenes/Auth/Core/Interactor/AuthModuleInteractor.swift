@@ -24,9 +24,11 @@ final class AuthModuleInteractor: AuthModuleInteractorInput {
 
     weak var output: AuthModuleInteractorOutput!
     private let authService: AuthServices
+    private let userSession: UserSession
 
-    init(authService: AuthServices) {
+    init(authService: AuthServices, userSession: UserSession) {
         self.authService = authService
+        self.userSession = userSession
     }
 
     func authenticate() {
@@ -42,6 +44,6 @@ final class AuthModuleInteractor: AuthModuleInteractorInput {
     }
 
     private func handleAuthResponse(_ user: User) {
-
+        userSession.storeSession(user)
     }
 }

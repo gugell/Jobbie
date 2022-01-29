@@ -19,11 +19,11 @@ final class LookupServiceIntegrationTests: XCTestCase {
     }
 
     func test_detail_whenNoAuthTokenIsProvided_shouldFail() {
-        //GIVEN
+        // GIVEN
         let expectation = self.expectation(description: "lookupCall")
         var error: Error?
 
-        //WHEN
+        // WHEN
         service.fetchOffers(query: .init(offset: nil)) { result in
             switch result {
             case .success:
@@ -34,9 +34,8 @@ final class LookupServiceIntegrationTests: XCTestCase {
             expectation.fulfill()
         }
 
-        //THEN
+        // THEN
         waitForExpectations(timeout: 5, handler: nil)
         XCTAssertEqual(error as! Failure, Failure.badStatusCode(401))
     }
 }
-

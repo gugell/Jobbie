@@ -29,7 +29,7 @@ enum OffersRequest: Request {
         return .get
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 
@@ -37,12 +37,25 @@ enum OffersRequest: Request {
         return URLEncoding.default
     }
 
-    var parameters: [String : Any]? {
+    var parameters: [String: Any]? {
         switch self {
         case .offers(let offset):
             return ["offset": offset ?? 0].compactMapValues { $0 }
         case .offer:
             return nil
+        }
+    }
+
+    var authorizationType: AuthorizationType? {
+        return .bearer
+    }
+
+    var fileName: String? {
+        switch self {
+        case .offers:
+            return "offers.response"
+        case .offer:
+            return "offer.response"
         }
     }
 }

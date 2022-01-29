@@ -1,8 +1,8 @@
 //
 //  HomeViewController.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import UIKit
@@ -22,6 +22,8 @@ protocol HomeModuleViewInput: Presentable, HUDPresentable {
   func applySnapshot(snapshot: Snapshot)
   /// Shows empty view if no data is available
   func showEmptyView()
+  /// Hides empty view if no data is available
+  func hideEmptyView()
 }
 
 /// Modules view output
@@ -49,7 +51,7 @@ final class HomeViewController: UICollectionViewController, HUDPresentable {
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(400))
+                                               heightDimension: .estimated(100))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize,
                                                        subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
@@ -111,7 +113,7 @@ extension HomeViewController: HomeModuleViewInput {
         emptyView.bind(to: .init(text: L10n.Home.emptyFeed))
     }
 
-    private func hideEmptyView() {
+    func hideEmptyView() {
         collectionView.backgroundView = nil
     }
 

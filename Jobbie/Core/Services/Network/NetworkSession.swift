@@ -8,7 +8,8 @@
 import Foundation
 
 protocol NetworkSession {
-    func executeTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task
+    func executeTask(with request: URLRequest,
+                     completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task
 }
 protocol Task {
     func resume()
@@ -16,9 +17,9 @@ protocol Task {
 }
 
 extension URLSession: NetworkSession {
-    func executeTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task {
+    func executeTask(with request: URLRequest,
+                     completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task {
         return dataTask(with: request, completionHandler: completionHandler)
     }
 }
 extension URLSessionTask: Task { }
-

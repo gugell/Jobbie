@@ -35,9 +35,9 @@ final class AuthModuleRouter: AuthModuleRouterInput {
         let retryAction = Alert.Action(title: L10n.Action.retry,
                                        style: .default,
                                        handler: onRetry)
-        let alert = Alert(title: L10n.Error.SignIn.title,
+        let alert = Alert(title: L10n.Error.Signin.title,
                      message: error,
-                     actions: [retryAction, Alert.Action.cancel])
+                     actions: [retryAction])
         coordinator.showAlert(alert)
     }
 }

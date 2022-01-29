@@ -38,4 +38,3 @@ extension AuthFlowCoordinator: AuthFlowCoordinatorInput {
 
     func didFinishFlow() { whenDone?() }
 }
-

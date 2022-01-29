@@ -1,8 +1,8 @@
 //
 //  Types.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import Foundation
@@ -16,11 +16,11 @@ extension ColorAsset {
     }
 }
 
-extension ImageAsset {
-    func callAsFunction() -> Image {
-        return image
-    }
-}
+// extension ImageAsset {
+//    func callAsFunction() -> Image {
+//        return image
+//    }
+// }
 
 func UI(_ closure: @escaping () -> Void) {
     DispatchQueue.main.async {

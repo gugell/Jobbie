@@ -10,8 +10,8 @@ import Foundation
 
 struct Shift: Codable {
 
-  var beginDate: Date
-  var endDate: Date
+  var beginDate: String // Date
+  var endDate: String // Date
   var breakTypes: Int
 
 }

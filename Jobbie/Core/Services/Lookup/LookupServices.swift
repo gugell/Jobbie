@@ -1,15 +1,16 @@
 //
 //  LookupServices.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import Combine
 import Foundation
 
 protocol LookupService {
-    func fetchOffers(query: LookupQuery, completionHandler: @escaping  (Result<LookupServiceResponse, Failure>) -> Void)
+    func fetchOffers(query: LookupQuery,
+                     completionHandler: @escaping  (Result<LookupServiceResponse, Failure>) -> Void)
 }
 
 final class LookupServiceImpl: LookupService {
@@ -19,7 +20,8 @@ final class LookupServiceImpl: LookupService {
         self.requestDispatcher = requestDispatcher
     }
 
-    func fetchOffers(query: LookupQuery, completionHandler: @escaping (Result<LookupServiceResponse, Failure>) -> Void) {
+    func fetchOffers(query: LookupQuery,
+                     completionHandler: @escaping (Result<LookupServiceResponse, Failure>) -> Void) {
         requestDispatcher.dataTask(with: OffersRequest.offers(offset: query.offset)) { result in
             switch result {
             case .success(let data):

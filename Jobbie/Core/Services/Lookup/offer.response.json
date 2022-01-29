@@ -1,0 +1,62 @@
+{
+   "id":"ehVBk6bpbMmA",
+   "jobMatchUuid":"7c4fa044-e5fd-494a-8a60-3555ffd38f40",
+   "jobCategoryKey":"SANDBOX",
+   "title":"Sandbox Job",
+   "description":"Please accept this sandbox job in a sandbox location as a sandbox helper",
+   "instructions":"Please come dressed",
+   "franchise":null,
+   "jobDefinitionId":null,
+   "companyName":"Sandbox Dummy",
+   "companyLogoUrl":"",
+   "minutesSum":"600",
+   "hourSum":null,
+   "breakTypes":[
+      {
+         "minutes":0,
+         "description":"Pause bei < 6 Stunden Arbeitszeit"
+      }
+   ],
+   "shifts":[
+      {
+         "beginDate":"2020-11-02T09:00:00+01:00",
+         "endDate":"2020-11-02T14:00:00+01:00",
+         "breakTypes":0
+      },
+      {
+         "beginDate":"2020-11-03T09:00:00+01:00",
+         "endDate":"2020-11-03T14:00:00+01:00",
+         "breakTypes":0
+      }
+   ],
+   "earningTotal":"110.00 EUR",
+   "earningHourly":"11.00 EUR",
+   "pricingTables":[
+      {
+         "isSummary":true,
+         "times":null,
+         "minutes":600,
+         "name":"Basislohn",
+         "unpaid":false,
+         "earningHourly":"11.00 EUR",
+         "earningTotal":"110.00 EUR"
+      }
+   ],
+   "location":{
+      "locationName":"Sandbox Store",
+      "locationDisplayName":"Sandbox Store",
+      "street":"Rosenthaler Straße",
+      "streetNumber":"13",
+      "supplementary":null,
+      "postalCode":"10119",
+      "city":"Berlin",
+      "district":"Mitte",
+      "locationSearchString":"Rosenthaler Straße 13, 10119 Berlin",
+      "locationLongitude":13.4028390,
+      "locationLatitude":52.5274570,
+      "timeTrackingEnabled":false
+   },
+   "initialHeadCount":1,
+   "jobType":"TRAINING",
+   "offerCategory":"GENERAL"
+}

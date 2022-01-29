@@ -1,52 +1,35 @@
 //
-//  RequestDispatcher.swift
+//  MockRequestDispatcher.swift
 //  Jobbie
 //
-//  Created by Ilia Gutu on 28.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import Foundation
 
-typealias Response<T> = Result<T, Failure>
-typealias Completion<T> = (Response<T>) -> Void
-typealias TokenClosure = () -> String?
-
-protocol RequestDispatcher {
-    func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> Task
-    func dataTask(with request: Request, completion: @escaping Completion<Data>) -> Task?
+public enum MockSessionFailure: Error, Equatable {
+    case invalidMockFile
+    case unknown
 }
 
-final class NetworkRequestDispatcher: RequestDispatcher {
-    private let session: NetworkSession
-    private let tokenClosure: TokenClosure
+final class MockRequestDispatcher: RequestDispatcher {
 
-    init(session: NetworkSession, tokenClosure: @escaping TokenClosure) {
-        self.session = session
-        self.tokenClosure = tokenClosure
-    }
+    var stubResponse: Response<Data> = .failure(.badResponse)
 
     func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> Task {
-        return session.executeTask(with: request) { [weak self] data, response, error in
-            self?.handle(data, response: response, error: error, completion: completion)
-        }
+        return MockURLSessionDataTask()
     }
 
     func dataTask(with request: Request, completion: @escaping Completion<Data>) -> Task? {
-        do {
-            var urlRequest = try request.asUrlRequest()
-            if let authorizationType = request.authorizationType,
-               let accessToken = tokenClosure() {
-                let authValue = authorizationType.rawValue + " " + accessToken
-                urlRequest.addValue(authValue, forHTTPHeaderField: "Authorization")
-            }
 
-            return session.executeTask(with: urlRequest) { [weak self] data, response, error in
-                self?.handle(data, response: response, error: error, completion: completion)
-            }
-        } catch {
-            completion(.failure(.underlying(error)))
-            return nil
+        guard let fileName = request.fileName,
+              let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            completion(stubResponse)
+            return EmptyTask()
         }
+
+        completion(.success(try! Data(contentsOf: url)))
+        return EmptyTask()
     }
 }
 

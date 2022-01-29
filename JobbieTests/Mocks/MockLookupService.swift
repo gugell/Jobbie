@@ -12,7 +12,8 @@ final class MockLookupService: LookupService {
 
     var responseStub: Result<LookupServiceResponse, Failure> = .failure(.badResponse)
 
-    func fetchOffers(query: LookupQuery, completionHandler: @escaping (Result<LookupServiceResponse, Failure>) -> Void) {
+    func fetchOffers(query: LookupQuery,
+                     completionHandler: @escaping (Result<LookupServiceResponse, Failure>) -> Void) {
         completionHandler(responseStub)
     }
 }

@@ -10,7 +10,8 @@ import Foundation
 enum AuthModuleAssembly {
     static func assembly(coordinator: AuthFlowCoordinatorInput) -> Presentable {
         let viewController =  AuthViewController()
-        let interactor = AuthModuleInteractor(authService: AppEnvironment.authService)
+        let interactor = AuthModuleInteractor(authService: AppEnvironment.authService,
+                                              userSession: AppEnvironment.userSession)
         let router = AuthModuleRouter(coordinator: coordinator)
         let presenter = AuthModulePresenter(view: viewController,
                                       interactor: interactor,

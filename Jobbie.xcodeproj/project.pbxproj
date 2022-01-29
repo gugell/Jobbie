@@ -55,13 +55,11 @@
 		657ABF7327A3FFF6009A12D0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7127A3FFF6009A12D0 /* Environment.swift */; };
 		657ABF7427A3FFF6009A12D0 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7227A3FFF6009A12D0 /* AppEnvironment.swift */; };
 		657ABF7627A4297C009A12D0 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7527A4297C009A12D0 /* RequestDispatcher.swift */; };
-		657ABF7827A42A4D009A12D0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7727A42A4D009A12D0 /* Task.swift */; };
 		657ABF7A27A42A82009A12D0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7927A42A82009A12D0 /* Request.swift */; };
 		657ABF7E27A4321D009A12D0 /* OffersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7D27A4321D009A12D0 /* OffersRequest.swift */; };
 		657ABF8027A43D65009A12D0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF7F27A43D65009A12D0 /* ParameterEncoding.swift */; };
 		657ABF8327A44056009A12D0 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8227A44056009A12D0 /* JSONResponseDecoder.swift */; };
 		657ABF8627A44367009A12D0 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8527A44367009A12D0 /* MockURLSession.swift */; };
-		657ABF8827A447D3009A12D0 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8727A447D3009A12D0 /* MockURLSessionDataTask.swift */; };
 		657ABF8A27A4481E009A12D0 /* LookupQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8927A4481E009A12D0 /* LookupQuery.swift */; };
 		657ABF8C27A44ADA009A12D0 /* MockLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8B27A44ADA009A12D0 /* MockLookupService.swift */; };
 		657ABF8E27A44B2A009A12D0 /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8D27A44B2A009A12D0 /* MockResponse.swift */; };
@@ -78,6 +76,20 @@
 		657ABFAD27A45A0F009A12D0 /* AuthModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFAC27A45A0F009A12D0 /* AuthModuleRouter.swift */; };
 		657ABFAF27A45A22009A12D0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFAE27A45A22009A12D0 /* AuthViewController.swift */; };
 		657ABFB127A45A32009A12D0 /* AuthModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFB027A45A32009A12D0 /* AuthModulePresenter.swift */; };
+		657ABFB627A5955F009A12D0 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFB527A5955F009A12D0 /* UserSession.swift */; };
+		657ABFBC27A5CB6B009A12D0 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF8727A447D3009A12D0 /* MockURLSessionDataTask.swift */; };
+		657ABFBE27A5CCDD009A12D0 /* signin.response.json in Resources */ = {isa = PBXBuildFile; fileRef = 657ABFB927A5C962009A12D0 /* signin.response.json */; };
+		657ABFC127A5CDD4009A12D0 /* offer.response.json in Resources */ = {isa = PBXBuildFile; fileRef = 657ABFC027A5CD9B009A12D0 /* offer.response.json */; };
+		657ABFC227A5CDD7009A12D0 /* offers.response.json in Resources */ = {isa = PBXBuildFile; fileRef = 657ABFBF27A5CD89009A12D0 /* offers.response.json */; };
+		657ABFC427A5CE12009A12D0 /* MockRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFC327A5CE12009A12D0 /* MockRequestDispatcher.swift */; };
+		657ABFC627A5CEE1009A12D0 /* EmptyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFC527A5CEE1009A12D0 /* EmptyTask.swift */; };
+		657ABFD527A5D1B4009A12D0 /* ListingDetailsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFC827A5D1B4009A12D0 /* ListingDetailsModule.swift */; };
+		657ABFD627A5D1B4009A12D0 /* DetailsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFCA27A5D1B4009A12D0 /* DetailsFlowCoordinator.swift */; };
+		657ABFD727A5D1B4009A12D0 /* ListingDetailsModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFCC27A5D1B4009A12D0 /* ListingDetailsModulePresenter.swift */; };
+		657ABFD827A5D1B4009A12D0 /* ListingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFCE27A5D1B4009A12D0 /* ListingDetailsViewController.swift */; };
+		657ABFD927A5D1B4009A12D0 /* TextInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFD027A5D1B4009A12D0 /* TextInfoTableViewCell.swift */; };
+		657ABFDB27A5D1B4009A12D0 /* ListingDetailsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFD227A5D1B4009A12D0 /* ListingDetailsDatasource.swift */; };
+		657ABFDC27A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABFD427A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +164,6 @@
 		657ABF7127A3FFF6009A12D0 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		657ABF7227A3FFF6009A12D0 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		657ABF7527A4297C009A12D0 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
-		657ABF7727A42A4D009A12D0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		657ABF7927A42A82009A12D0 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		657ABF7D27A4321D009A12D0 /* OffersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRequest.swift; sourceTree = "<group>"; };
 		657ABF7F27A43D65009A12D0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -175,6 +186,19 @@
 		657ABFAC27A45A0F009A12D0 /* AuthModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleRouter.swift; sourceTree = "<group>"; };
 		657ABFAE27A45A22009A12D0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		657ABFB027A45A32009A12D0 /* AuthModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModulePresenter.swift; sourceTree = "<group>"; };
+		657ABFB527A5955F009A12D0 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		657ABFB927A5C962009A12D0 /* signin.response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = signin.response.json; sourceTree = "<group>"; };
+		657ABFBF27A5CD89009A12D0 /* offers.response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offers.response.json; sourceTree = "<group>"; };
+		657ABFC027A5CD9B009A12D0 /* offer.response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offer.response.json; sourceTree = "<group>"; };
+		657ABFC327A5CE12009A12D0 /* MockRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestDispatcher.swift; sourceTree = "<group>"; };
+		657ABFC527A5CEE1009A12D0 /* EmptyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTask.swift; sourceTree = "<group>"; };
+		657ABFC827A5D1B4009A12D0 /* ListingDetailsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailsModule.swift; sourceTree = "<group>"; };
+		657ABFCA27A5D1B4009A12D0 /* DetailsFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsFlowCoordinator.swift; sourceTree = "<group>"; };
+		657ABFCC27A5D1B4009A12D0 /* ListingDetailsModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailsModulePresenter.swift; sourceTree = "<group>"; };
+		657ABFCE27A5D1B4009A12D0 /* ListingDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailsViewController.swift; sourceTree = "<group>"; };
+		657ABFD027A5D1B4009A12D0 /* TextInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInfoTableViewCell.swift; sourceTree = "<group>"; };
+		657ABFD227A5D1B4009A12D0 /* ListingDetailsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailsDatasource.swift; sourceTree = "<group>"; };
+		657ABFD427A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailsModuleRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +305,7 @@
 		657ABEF427A3DD86009A12D0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				657ABFC727A5D198009A12D0 /* Detail */,
 				657ABF4127A3FB30009A12D0 /* Home */,
 				657ABF3F27A3FB0D009A12D0 /* Auth */,
 			);
@@ -346,8 +371,8 @@
 		657ABF1927A3DE4A009A12D0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				657ABFBD27A5CB71009A12D0 /* Mocks */,
 				657ABF3D27A3F8D9009A12D0 /* Failure.swift */,
-				657ABF7727A42A4D009A12D0 /* Task.swift */,
 				657ABF6F27A3FF0C009A12D0 /* NetworkSession.swift */,
 				657ABF7527A4297C009A12D0 /* RequestDispatcher.swift */,
 				657ABF7927A42A82009A12D0 /* Request.swift */,
@@ -465,6 +490,8 @@
 				657ABF5D27A3FE90009A12D0 /* LookupServices.swift */,
 				657ABF8927A4481E009A12D0 /* LookupQuery.swift */,
 				657ABF9E27A45747009A12D0 /* LookupServiceResponse.swift */,
+				657ABFBF27A5CD89009A12D0 /* offers.response.json */,
+				657ABFC027A5CD9B009A12D0 /* offer.response.json */,
 			);
 			path = Lookup;
 			sourceTree = "<group>";
@@ -488,6 +515,8 @@
 				657ABF9327A44D8C009A12D0 /* AuthServices.swift */,
 				657ABF9527A44DC6009A12D0 /* AuthRequest.swift */,
 				657ABF9727A44DEE009A12D0 /* Credentials.swift */,
+				657ABFB527A5955F009A12D0 /* UserSession.swift */,
+				657ABFB927A5C962009A12D0 /* signin.response.json */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -496,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				657ABF8527A44367009A12D0 /* MockURLSession.swift */,
-				657ABF8727A447D3009A12D0 /* MockURLSessionDataTask.swift */,
 				657ABF8B27A44ADA009A12D0 /* MockLookupService.swift */,
 				657ABF8D27A44B2A009A12D0 /* MockResponse.swift */,
 			);
@@ -553,6 +581,70 @@
 				657ABFAE27A45A22009A12D0 /* AuthViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		657ABFBD27A5CB71009A12D0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFC327A5CE12009A12D0 /* MockRequestDispatcher.swift */,
+				657ABF8727A447D3009A12D0 /* MockURLSessionDataTask.swift */,
+				657ABFC527A5CEE1009A12D0 /* EmptyTask.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		657ABFC727A5D198009A12D0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFC927A5D1B4009A12D0 /* Core */,
+				657ABFC827A5D1B4009A12D0 /* ListingDetailsModule.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		657ABFC927A5D1B4009A12D0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFCA27A5D1B4009A12D0 /* DetailsFlowCoordinator.swift */,
+				657ABFCB27A5D1B4009A12D0 /* Presenter */,
+				657ABFCD27A5D1B4009A12D0 /* View */,
+				657ABFD327A5D1B4009A12D0 /* Router */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		657ABFCB27A5D1B4009A12D0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFCC27A5D1B4009A12D0 /* ListingDetailsModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		657ABFCD27A5D1B4009A12D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFCE27A5D1B4009A12D0 /* ListingDetailsViewController.swift */,
+				657ABFCF27A5D1B4009A12D0 /* Components */,
+				657ABFD227A5D1B4009A12D0 /* ListingDetailsDatasource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		657ABFCF27A5D1B4009A12D0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFD027A5D1B4009A12D0 /* TextInfoTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		657ABFD327A5D1B4009A12D0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				657ABFD427A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,8 +753,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657ABFC127A5CDD4009A12D0 /* offer.response.json in Resources */,
 				657ABECF27A3DD20009A12D0 /* LaunchScreen.storyboard in Resources */,
+				657ABFBE27A5CCDD009A12D0 /* signin.response.json in Resources */,
 				657ABF2E27A3F7BD009A12D0 /* Colors.xcassets in Resources */,
+				657ABFC227A5CDD7009A12D0 /* offers.response.json in Resources */,
 				657ABF2127A3E096009A12D0 /* Localizable.strings in Resources */,
 				657ABECC27A3DD20009A12D0 /* Assets.xcassets in Resources */,
 			);
@@ -730,13 +825,13 @@
 			files = (
 				657ABF0527A3DDBB009A12D0 /* Wireframe.swift in Sources */,
 				657ABF7E27A4321D009A12D0 /* OffersRequest.swift in Sources */,
+				657ABFDC27A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift in Sources */,
 				657ABFAD27A45A0F009A12D0 /* AuthModuleRouter.swift in Sources */,
 				657ABF9D27A4539C009A12D0 /* LoadingViewController.swift in Sources */,
 				657ABF3C27A3F8A5009A12D0 /* Assets.swift in Sources */,
 				657ABF9F27A45747009A12D0 /* LookupServiceResponse.swift in Sources */,
 				657ABF5027A3FB30009A12D0 /* HomeModulePresenter.swift in Sources */,
 				657ABF5127A3FB30009A12D0 /* ListingsCollectionDatasource.swift in Sources */,
-				657ABF7827A42A4D009A12D0 /* Task.swift in Sources */,
 				657ABF3127A3F7EE009A12D0 /* Colors.swift in Sources */,
 				657ABF6027A3FE90009A12D0 /* LookupServices.swift in Sources */,
 				657ABF0D27A3DDC7009A12D0 /* HUDPresentable.swift in Sources */,
@@ -744,19 +839,24 @@
 				657ABF5527A3FB30009A12D0 /* HomeModuleRouter.swift in Sources */,
 				657ABF5727A3FB30009A12D0 /* HomeModuleBuilder.swift in Sources */,
 				657ABF8A27A4481E009A12D0 /* LookupQuery.swift in Sources */,
+				657ABFD827A5D1B4009A12D0 /* ListingDetailsViewController.swift in Sources */,
 				657ABFAF27A45A22009A12D0 /* AuthViewController.swift in Sources */,
 				657ABF0427A3DDBB009A12D0 /* DefaultWireframe.swift in Sources */,
 				657ABF3927A3F85B009A12D0 /* BaseCoordinator.swift in Sources */,
 				657ABF6E27A3FEC1009A12D0 /* BreakType.swift in Sources */,
 				657ABF1727A3DDFD009A12D0 /* Types.swift in Sources */,
+				657ABFBC27A5CB6B009A12D0 /* MockURLSessionDataTask.swift in Sources */,
 				657ABF5927A3FB90009A12D0 /* Reusable.swift in Sources */,
 				657ABF6B27A3FEC1009A12D0 /* PricingTable.swift in Sources */,
 				657ABF9627A44DC6009A12D0 /* AuthRequest.swift in Sources */,
 				657ABF3A27A3F85B009A12D0 /* Coordinator.swift in Sources */,
+				657ABFD927A5D1B4009A12D0 /* TextInfoTableViewCell.swift in Sources */,
 				657ABF7627A4297C009A12D0 /* RequestDispatcher.swift in Sources */,
 				657ABF0027A3DDA5009A12D0 /* AppDelegate.swift in Sources */,
 				657ABF5627A3FB30009A12D0 /* HomeFlowCoordinator.swift in Sources */,
+				657ABFD727A5D1B4009A12D0 /* ListingDetailsModulePresenter.swift in Sources */,
 				657ABF7427A3FFF6009A12D0 /* AppEnvironment.swift in Sources */,
+				657ABFD527A5D1B4009A12D0 /* ListingDetailsModule.swift in Sources */,
 				657ABF7027A3FF0C009A12D0 /* NetworkSession.swift in Sources */,
 				657ABFB127A45A32009A12D0 /* AuthModulePresenter.swift in Sources */,
 				657ABFA127A458D9009A12D0 /* AuthFlowCoordinator.swift in Sources */,
@@ -766,15 +866,20 @@
 				657ABF5227A3FB30009A12D0 /* HomeViewController.swift in Sources */,
 				657ABF6A27A3FEC1009A12D0 /* Shift.swift in Sources */,
 				657ABF6D27A3FEC1009A12D0 /* Offer.swift in Sources */,
+				657ABFB627A5955F009A12D0 /* UserSession.swift in Sources */,
 				657ABF9427A44D8C009A12D0 /* AuthServices.swift in Sources */,
 				657ABF6927A3FEC1009A12D0 /* Location.swift in Sources */,
 				657ABF0E27A3DDC7009A12D0 /* BindableType.swift in Sources */,
 				657ABF6C27A3FEC1009A12D0 /* User.swift in Sources */,
+				657ABFC427A5CE12009A12D0 /* MockRequestDispatcher.swift in Sources */,
+				657ABFDB27A5D1B4009A12D0 /* ListingDetailsDatasource.swift in Sources */,
 				657ABFAB27A459FF009A12D0 /* AuthModuleInteractor.swift in Sources */,
 				657ABF0F27A3DDC7009A12D0 /* Alert.swift in Sources */,
+				657ABFD627A5D1B4009A12D0 /* DetailsFlowCoordinator.swift in Sources */,
 				657ABEFE27A3DDA5009A12D0 /* ApplicationFlowService.swift in Sources */,
 				657ABF1127A3DDC7009A12D0 /* Presentable.swift in Sources */,
 				657ABF8327A44056009A12D0 /* JSONResponseDecoder.swift in Sources */,
+				657ABFC627A5CEE1009A12D0 /* EmptyTask.swift in Sources */,
 				657ABF8027A43D65009A12D0 /* ParameterEncoding.swift in Sources */,
 				657ABF7327A3FFF6009A12D0 /* Environment.swift in Sources */,
 				657ABFA327A4590C009A12D0 /* AuthModuleBuilder.swift in Sources */,
@@ -793,7 +898,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				657ABF8827A447D3009A12D0 /* MockURLSessionDataTask.swift in Sources */,
 				657ABF9A27A44EBC009A12D0 /* AuthServicesIntegrationTests.swift in Sources */,
 				657ABF9227A44BC5009A12D0 /* LookupServiceIntegrationTests.swift in Sources */,
 				657ABF8E27A44B2A009A12D0 /* MockResponse.swift in Sources */,
@@ -982,6 +1086,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1010,6 +1115,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

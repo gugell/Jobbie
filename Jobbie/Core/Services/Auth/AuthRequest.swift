@@ -25,7 +25,7 @@ enum AuthRequest: Request {
         return .post
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 
@@ -33,13 +33,17 @@ enum AuthRequest: Request {
         return JSONEncoding.default
     }
 
-    var parameters: [String : Any]? {
+    var parameters: [String: Any]? {
         switch self {
         case .login(let credentials):
             return [
                 "username": credentials.username,
-                "password": credentials.password,
+                "password": credentials.password
             ]
         }
+    }
+
+    var fileName: String? {
+        return "signin.response"
     }
 }

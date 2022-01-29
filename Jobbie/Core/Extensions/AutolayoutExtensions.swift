@@ -18,7 +18,7 @@ extension UIView {
 
     @discardableResult
     func pinToEdges(of view: UIView? = nil,
-                           withInsets insets: UIEdgeInsets = .zero) -> Self {
+                    withInsets insets: UIEdgeInsets = .zero) -> Self {
         let view = view ?? parent
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: view.topAnchor, constant: insets.top),
@@ -129,7 +129,6 @@ extension UIView {
         addTrailingConstraint(to: anchor, of: view, constant: constant, priority: priority)
         return self
     }
-
 
     @discardableResult
     public func center(in view: UIView? = nil, withMargin margin: CGFloat = 0) -> Self {

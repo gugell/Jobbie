@@ -18,11 +18,11 @@ final class AuthServicesIntegrationTests: XCTestCase {
     }
 
     func test_signIn_whenCorrectCredentialsAreProvided_shouldSucceed() {
-        //GIVEN
+        // GIVEN
         let expectation = self.expectation(description: "authCall")
         var user: User?
 
-        //WHEN
+        // WHEN
         service.signIn(with: .default) { result in
             switch result {
             case .success(let response):
@@ -33,18 +33,18 @@ final class AuthServicesIntegrationTests: XCTestCase {
             expectation.fulfill()
         }
 
-        //THEN
+        // THEN
         waitForExpectations(timeout: 10, handler: nil)
 //        XCTAssertEqual(error as! Failure, Failure.badStatusCode(401))
         XCTAssertNotNil(user)
     }
 
     func test_signIn_whenWrongCredentialsAreProvided_shouldSucceed() {
-        //GIVEN
+        // GIVEN
         let expectation = self.expectation(description: "authCall")
         var error: Error?
 
-        //WHEN
+        // WHEN
         service.signIn(with: .init(username: "goodboy", password: "his_password")) { result in
             switch result {
             case .success:
@@ -55,9 +55,8 @@ final class AuthServicesIntegrationTests: XCTestCase {
             expectation.fulfill()
         }
 
-        //THEN
+        // THEN
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertEqual(error as! Failure, Failure.badStatusCode(401))
     }
 }
-

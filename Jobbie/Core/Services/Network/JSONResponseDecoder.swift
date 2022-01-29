@@ -87,4 +87,3 @@ enum DecodingFailure: Error, Equatable {
         }
     }
 }
-

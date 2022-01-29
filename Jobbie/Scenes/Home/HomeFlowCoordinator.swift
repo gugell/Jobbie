@@ -1,8 +1,8 @@
 //
 //  HomeFlowCoordinator.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import Foundation
@@ -37,11 +37,11 @@ extension HomeFlowCoordinator: HomeFlowCoordinatorInput {
     }
 
     func showOfferDetails(_ offer: Offer) {
-//        let coordinator = DetailsFlowCoordinator(listing: listing, wireframe: wireframe)
-//        coordinator.whenDone = { [weak self, weak coordinator] in
-//            self?.removeDependency(coordinator)
-//        }
-//        addDependency(coordinator)
-//        coordinator.start()
+        let coordinator = DetailsFlowCoordinator(offer: offer, wireframe: wireframe)
+        coordinator.whenDone = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
 }

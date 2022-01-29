@@ -1,6 +1,6 @@
 //
 //  Alert.swift
-//  Classie
+//  Jobbie
 //
 //  Created by Ilia Gutu on 13.01.2022.
 //

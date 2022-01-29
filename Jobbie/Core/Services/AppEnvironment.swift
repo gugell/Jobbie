@@ -1,8 +1,8 @@
 //
 //  AppEnvironment.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import UIKit
@@ -34,6 +34,10 @@ extension AppEnvironment {
 
     public static var authService: AuthServices {
         current.authService
+    }
+
+    public static var userSession: UserSession {
+        current.userSession
     }
 
     public static var baseURL: URL {

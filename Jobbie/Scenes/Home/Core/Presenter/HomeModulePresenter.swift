@@ -1,8 +1,8 @@
 //
 //  HomeModulePresenter.swift
-//  Classie
+//  Jobbie
 //
-//  Created by Ilia Gutu on 15.01.2022.
+//  Created by Ilia Gutu on 29.01.2022.
 //
 
 import Foundation
@@ -41,12 +41,12 @@ final class HomeModulePresenter: HomeModuleViewOutput, HomeModuleInteractorOutpu
 
     func interactorDidFinishLoading(_ offers: [Offer]) {
         view?.endRefreshing()
-//        let viewModels = listings.map { ListingCollectionViewCellViewModel(listing: $0) }
-//        var snapshot = Snapshot()
-//        snapshot.appendSections([0])
-//        snapshot.appendItems(viewModels)
-//        self.offers = offers
-//        view?.applySnapshot(snapshot: snapshot)
+        let viewModels = offers.map { OfferCollectionViewCellViewModel(offer: $0) }
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(viewModels)
+        self.offers = offers
+        view?.applySnapshot(snapshot: snapshot)
     }
 
     func interactorDidFailWithError(_ error: String) {
@@ -60,6 +60,7 @@ final class HomeModulePresenter: HomeModuleViewOutput, HomeModuleInteractorOutpu
 
     func reloadData() {
         view?.showHUD()
+        view?.hideEmptyView()
         interactor.reloadData()
     }
 }

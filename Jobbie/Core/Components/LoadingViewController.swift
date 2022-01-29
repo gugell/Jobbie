@@ -27,4 +27,3 @@ final class LoadingViewController: UIViewController {
         UI { [weak self] in  self?.activityIndicator.startAnimating() }
     }
 }
-
