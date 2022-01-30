@@ -186,6 +186,42 @@ extension UIView {
         return self
     }
 
+    @discardableResult
+    public func height(
+        _ constant: CGFloat,
+        priority: UILayoutPriority = .required) -> Self {
+            addHeight(constant, priority: priority)
+        return self
+    }
+
+    @discardableResult
+    public func addHeight(
+        _ constant: CGFloat,
+        priority: UILayoutPriority = .required
+        ) -> NSLayoutConstraint {
+            return heightAnchor.constraint(equalToConstant: constant)
+            .priority(priority)
+            .activate()
+    }
+
+    @discardableResult
+    public func width(
+        _ constant: CGFloat,
+        priority: UILayoutPriority = .required) -> Self {
+            addWidth(constant, priority: priority)
+        return self
+    }
+
+    @discardableResult
+    public func addWidth(
+        _ constant: CGFloat,
+        priority: UILayoutPriority = .required
+        ) -> NSLayoutConstraint {
+            return widthAnchor.constraint(equalToConstant: constant)
+            .priority(priority)
+            .activate()
+    }
+
     var parent: UIView {
         guard let parent = superview else { fatalError("The view has no superview") }
         return parent

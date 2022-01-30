@@ -86,6 +86,7 @@ final class HomeViewController: UICollectionViewController, HUDPresentable {
 
     private func setupUI() {
         navigationItem.title = L10n.Home.title
+        collectionView.backgroundColor = Colors.white(alpha: 0.9)
         refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: L10n.Offers.fetching)
         collectionView.refreshControl = refreshControl

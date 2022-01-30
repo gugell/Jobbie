@@ -11,9 +11,13 @@
 "home.emptyFeed" = "No offers available at the moment.";
 
 // MARK: - Offers
-
 "offers.fetching" = "Fetching Offers";
 
+// MARK: - Offer
+"offer.earnType" = "%@ per hour";
+"offer.description" = "Description";
+"offer.location" = "Location";
+"offer.location.open" = "View on maps";
 
 // MARK: - Errors
 "action.retry" = "Retry";

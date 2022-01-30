@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultipleShiftsView: UIView {
+final class MultipleShiftsView: UIView {
 
   let startDateLabel: UILabel = {
     let label = UILabel()

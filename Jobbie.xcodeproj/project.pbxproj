@@ -96,6 +96,10 @@
 		657AC34327A674B4009A12D0 /* MultipleShiftsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC33C27A674B4009A12D0 /* MultipleShiftsCell.swift */; };
 		657AC34427A674B4009A12D0 /* MultipleShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC33D27A674B4009A12D0 /* MultipleShiftsView.swift */; };
 		657AC34527A674B4009A12D0 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC33E27A674B4009A12D0 /* ShiftCell.swift */; };
+		657AC34727A67995009A12D0 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34627A67995009A12D0 /* FoundationExtensions.swift */; };
+		657AC34927A67A12009A12D0 /* OfferDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */; };
+		657AC34B27A67A44009A12D0 /* OfferInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */; };
+		657AC34D27A682C2009A12D0 /* OfferLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +215,10 @@
 		657AC33C27A674B4009A12D0 /* MultipleShiftsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleShiftsCell.swift; sourceTree = "<group>"; };
 		657AC33D27A674B4009A12D0 /* MultipleShiftsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleShiftsView.swift; sourceTree = "<group>"; };
 		657AC33E27A674B4009A12D0 /* ShiftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
+		657AC34627A67995009A12D0 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoTableViewCell.swift; sourceTree = "<group>"; };
+		657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferLocationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +372,7 @@
 			children = (
 				657ABF1527A3DDFD009A12D0 /* Types.swift */,
 				657ABF2927A3E110009A12D0 /* AutolayoutExtensions.swift */,
+				657AC34627A67995009A12D0 /* FoundationExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -653,6 +662,9 @@
 			isa = PBXGroup;
 			children = (
 				657ABFD027A5D1B4009A12D0 /* TextInfoTableViewCell.swift */,
+				657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */,
+				657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */,
+				657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -844,11 +856,13 @@
 				657ABF0527A3DDBB009A12D0 /* Wireframe.swift in Sources */,
 				657AC34527A674B4009A12D0 /* ShiftCell.swift in Sources */,
 				657ABF7E27A4321D009A12D0 /* OffersRequest.swift in Sources */,
+				657AC34927A67A12009A12D0 /* OfferDescriptionTableViewCell.swift in Sources */,
 				657ABFDC27A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift in Sources */,
 				657ABFAD27A45A0F009A12D0 /* AuthModuleRouter.swift in Sources */,
 				657ABF9D27A4539C009A12D0 /* LoadingViewController.swift in Sources */,
 				657ABF3C27A3F8A5009A12D0 /* Assets.swift in Sources */,
 				657ABF9F27A45747009A12D0 /* LookupServiceResponse.swift in Sources */,
+				657AC34D27A682C2009A12D0 /* OfferLocationTableViewCell.swift in Sources */,
 				657ABF5027A3FB30009A12D0 /* HomeModulePresenter.swift in Sources */,
 				657ABF5127A3FB30009A12D0 /* ListingsCollectionDatasource.swift in Sources */,
 				657ABF3127A3F7EE009A12D0 /* Colors.swift in Sources */,
@@ -885,6 +899,7 @@
 				657ABF3827A3F85B009A12D0 /* DeepLinkOption.swift in Sources */,
 				657ABF5227A3FB30009A12D0 /* HomeViewController.swift in Sources */,
 				657ABF6A27A3FEC1009A12D0 /* Shift.swift in Sources */,
+				657AC34727A67995009A12D0 /* FoundationExtensions.swift in Sources */,
 				657ABF6D27A3FEC1009A12D0 /* Offer.swift in Sources */,
 				657ABFB627A5955F009A12D0 /* UserSession.swift in Sources */,
 				657ABF9427A44D8C009A12D0 /* AuthServices.swift in Sources */,
@@ -911,6 +926,7 @@
 				657ABEFC27A3DDA5009A12D0 /* ApplicationCoordinator.swift in Sources */,
 				657ABEFD27A3DDA5009A12D0 /* AppServicesManager+AppInitializing.swift in Sources */,
 				657ABF1027A3DDC7009A12D0 /* EmptyView.swift in Sources */,
+				657AC34B27A67A44009A12D0 /* OfferInfoTableViewCell.swift in Sources */,
 				657AC34227A674B4009A12D0 /* LocationView.swift in Sources */,
 				657ABEFF27A3DDA5009A12D0 /* AppServicesManager.swift in Sources */,
 				657ABF3327A3F80D009A12D0 /* L10n.swift in Sources */,

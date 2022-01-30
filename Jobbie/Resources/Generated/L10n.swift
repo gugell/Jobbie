@@ -41,6 +41,21 @@ public enum L10n {
     public static let title = L10n.tr("Localizable", "home.title")
   }
 
+  public enum Offer {
+    /// Description
+    public static let description = L10n.tr("Localizable", "offer.description")
+    /// %@ per hour
+    public static func earnType(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "offer.earnType", String(describing: p1))
+    }
+    /// Location
+    public static let location = L10n.tr("Localizable", "offer.location")
+    public enum Location {
+      /// View on maps
+      public static let `open` = L10n.tr("Localizable", "offer.location.open")
+    }
+  }
+
   public enum Offers {
     /// Fetching Offers
     public static let fetching = L10n.tr("Localizable", "offers.fetching")

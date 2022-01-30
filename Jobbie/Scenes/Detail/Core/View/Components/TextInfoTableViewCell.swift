@@ -9,9 +9,20 @@ import UIKit
 
 final class TextInfoTableViewCell: UITableViewCell, Reusable, BindableType {
 
-    private let titleLabel = UILabel()
-    private let priceLabel = UILabel()
-    private let dateLabel = UILabel()
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+
+        return label
+    }()
+
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.numberOfLines = 0
+
+        return label
+    }()
 
     var viewModel: TextInfoCellViewModel!
 
@@ -30,31 +41,20 @@ final class TextInfoTableViewCell: UITableViewCell, Reusable, BindableType {
             .top(to: \.topAnchor, constant: 20)
             .leading(to: \.leadingAnchor, constant: 10)
 
-        priceLabel.add(to: self)
-            .leading(to: \.trailingAnchor, of: titleLabel, constant: 20)
-            .trailing(to: \.trailingAnchor, constant: 10)
-            .centerY(to: \.centerYAnchor, of: titleLabel)
-
-        dateLabel.add(to: self)
+        descriptionLabel.add(to: self)
             .top(to: \.bottomAnchor, of: titleLabel, constant: 10)
             .leading(to: \.leadingAnchor, constant: 10)
             .trailing(to: \.trailingAnchor, constant: 10)
             .bottom(to: \.bottomAnchor, constant: 20)
-//
-//        titleLabel.apply(style: TextStyles.title)
-//        dateLabel.apply(style: TextStyles.subtitle)
-//        priceLabel.apply(style: TextStyles.attribute)
     }
 
     func bindViewModel() {
-        titleLabel.text = viewModel.name
-        priceLabel.text = viewModel.price
-        dateLabel.text = viewModel.createdAt
+        titleLabel.text = viewModel.title
+        descriptionLabel.text = viewModel.text
     }
 }
 
 struct TextInfoCellViewModel {
-    let name: String
-    let price: String
-    let createdAt: String
+    let title: String
+    let text: String
 }

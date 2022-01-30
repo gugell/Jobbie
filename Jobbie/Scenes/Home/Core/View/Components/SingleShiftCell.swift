@@ -112,7 +112,7 @@ final class SingleShiftCell: UICollectionViewCell, Reusable, BindableType {
     }
 
     func bindViewModel() {
-        generalView.populate(offer: viewModel.item)
+        generalView.populate(title: viewModel.item.title, totalEarn: viewModel.item.earningTotal, hourlyEarn: viewModel.item.earningHourly)
         locationView.populate(location: viewModel.item.location)
         shiftsView.populate(shifts: viewModel.item.shifts)
     }

@@ -110,14 +110,10 @@ final class MultipleShiftsCell: UICollectionViewCell, Reusable, BindableType {
         ])
     }
 
-    func populate(offer: Offer) {
-        generalView.populate(offer: offer)
-        locationView.populate(location: offer.location)
-        shiftsView.populate(shifts: offer.shifts)
-    }
-
     func bindViewModel() {
-        generalView.populate(offer: viewModel.item)
+        generalView.populate(title: viewModel.item.title,
+                             totalEarn: viewModel.item.earningTotal,
+                             hourlyEarn: viewModel.item.earningHourly)
         locationView.populate(location: viewModel.item.location)
         shiftsView.populate(shifts: viewModel.item.shifts)
     }

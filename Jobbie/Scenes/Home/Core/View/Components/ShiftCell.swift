@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShiftCell: UITableViewCell {
+final class ShiftCell: UITableViewCell {
 
     private let cardView: UIView = {
         let view = UIView()
@@ -107,29 +107,5 @@ class ShiftCell: UITableViewCell {
         dayLabel.text = nil
         dateLabel.text = nil
         dateLabel.text = nil
-    }
-
-}
-
-extension Date {
-    var day: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.dateFormat = "EE"
-        return formatter.string(from: self)
-    }
-
-    func toString(format: String = "EE. dd.MM") -> String {
-      let formatter = DateFormatter()
-      formatter.dateStyle = .short
-      formatter.dateFormat = format
-      return formatter.string(from: self)
-    }
-
-    func timeIn24HourFormat() -> String {
-      let formatter = DateFormatter()
-      formatter.dateStyle = .none
-      formatter.dateFormat = "HH:mm"
-      return formatter.string(from: self)
     }
 }

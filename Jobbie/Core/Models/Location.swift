@@ -23,3 +23,8 @@ struct Location: Codable {
   var supplementary: String?
 
 }
+
+struct Coordinate: Hashable {
+    let latitude: Double
+    let longitude: Double
+}

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GeneralView: UIView {
+final class GeneralView: UIView {
 
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -83,20 +83,19 @@ class GeneralView: UIView {
     override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         fitSizes()
-        self.applyGradient(startColor: UIColor(red: 0.980, green: 0.271, blue: 0.451, alpha: 1.0).cgColor, endColor: UIColor(red: 0.290, green: 0.149, blue: 0.592, alpha: 1.0).cgColor)
+        applyGradient(startColor: UIColor(red: 0.980,
+                                               green: 0.271,
+                                               blue: 0.451,
+                                               alpha: 1.0).cgColor,
+                           endColor: UIColor(red: 0.290, green: 0.149, blue: 0.592, alpha: 1.0).cgColor)
     }
 
     /// Populates the view's properties with an offer
-    func populate(offer: Offer) {
+    func populate(title: String, totalEarn: String, hourlyEarn: String) {
         fitSizes()
-        titleLabel.text = offer.title
-        totalEarnLabel.text = offer.earningTotal.toCurrency
-        hourlyEarnLabel.text = String(format: NSLocalizedString("hourlyEarn", comment: ""), offer.earningHourly.toCurrency)
-    }
-
-    func transition(offer: Offer) {
-        populate(offer: offer)
-        generalLabel.text = "GENERAL"
+        titleLabel.text = title
+        totalEarnLabel.text = totalEarn.toCurrency
+        hourlyEarnLabel.text =         L10n.Offer.earnType(hourlyEarn.toCurrency)
     }
 
     func prepareForReuse() {
