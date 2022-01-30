@@ -26,7 +26,7 @@ extension ColorAsset {
     }
  }
 
-func UI(_ closure: @escaping () -> Void) {
+func onMain(_ closure: @escaping () -> Void) {
     DispatchQueue.main.async {
         closure()
     }

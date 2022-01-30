@@ -11,6 +11,7 @@ enum ListingDetailsItem: Hashable {
     case description(title: String, totalEarn: String, hourlyEarn: String)
     case text(description: String)
     case location(cityName: String?, districtName: String?, formattedAddress: String, coordinates: Coordinate)
+    case shifts(_ items: [ShiftCellViewModel])
 }
 
 final class ListingDetailsTableDatasource: UITableViewDiffableDataSource<Int, ListingDetailsItem> {
@@ -20,6 +21,7 @@ final class ListingDetailsTableDatasource: UITableViewDiffableDataSource<Int, Li
         tableView.register(cellType: OfferLocationTableViewCell.self)
         tableView.register(cellType: OfferDescriptionTableViewCell.self)
         tableView.register(cellType: OfferInfoTableViewCell.self)
+        tableView.register(cellType: OfferShiftsTableViewCell.self)
 
         super.init(tableView: tableView) { (collectionView, indexPath, item) -> UITableViewCell? in
             switch item {
@@ -41,6 +43,12 @@ final class ListingDetailsTableDatasource: UITableViewDiffableDataSource<Int, Li
             case .text(let description):
                 var cell = collectionView.dequeueReusableCell(for: indexPath, cellType: TextInfoTableViewCell.self)
                 cell.bind(to: .init(title: L10n.Offer.description, text: description))
+
+                return cell
+
+            case .shifts(let items):
+                var cell = collectionView.dequeueReusableCell(for: indexPath, cellType: OfferShiftsTableViewCell.self)
+                cell.bind(to: .init(shifts: items))
 
                 return cell
             }

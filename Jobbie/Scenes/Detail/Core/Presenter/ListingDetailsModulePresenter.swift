@@ -30,6 +30,7 @@ final class ListingDetailsModulePresenter: ListingDetailsModuleViewOutput {
     func viewDidLoad() {
         view?.setupInitialState(viewModel: .init(title: offer.title))
         var snapshot = ListingDetailsSnapshot()
+
         snapshot.appendSections([0])
         snapshot.appendItems([
             .description(title: offer.title, totalEarn: offer.earningTotal, hourlyEarn: offer.earningHourly),
@@ -38,6 +39,7 @@ final class ListingDetailsModulePresenter: ListingDetailsModuleViewOutput {
                       formattedAddress: offer.location.locationSearchString ?? "na",
                       coordinates: .init(latitude: offer.location.locationLatitude ?? 0,
                                          longitude: offer.location.locationLongitude ?? 0)),
+            .shifts(offer.shifts.map { ShiftCellViewModel(shift: $0) }),
             .text(description: offer.description)])
         view?.applySnapshot(snapshot: snapshot)
     }

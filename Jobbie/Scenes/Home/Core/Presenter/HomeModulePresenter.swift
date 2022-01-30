@@ -50,7 +50,7 @@ final class HomeModulePresenter: HomeModuleViewOutput, HomeModuleInteractorOutpu
     }
 
     func interactorDidFailWithError(_ error: String) {
-        UI {
+        onMain {
             self.view?.endRefreshing()
             self.view?.showEmptyView()
             self.router.showErrorAlert(error, onRetry: self.reloadData)

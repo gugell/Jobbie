@@ -39,14 +39,14 @@ final class AuthModulePresenter: AuthModuleViewOutput, AuthModuleInteractorOutpu
     }
 
     func interactorDidFailWithError(_ error: String) {
-        UI { [weak self] in
+        onMain { [weak self] in
             guard let self = self else { return }
             self.router.showErrorAlert(error, onRetry: self.authenticate)
         }
     }
 
     func interactorDidFinishSignin() {
-        UI { [weak self] in
+        onMain { [weak self] in
             self?.router.navigateNext()
         }
     }

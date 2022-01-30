@@ -38,7 +38,6 @@
 		657ABF5027A3FB30009A12D0 /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4427A3FB30009A12D0 /* HomeModulePresenter.swift */; };
 		657ABF5127A3FB30009A12D0 /* ListingsCollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4627A3FB30009A12D0 /* ListingsCollectionDatasource.swift */; };
 		657ABF5227A3FB30009A12D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4727A3FB30009A12D0 /* HomeViewController.swift */; };
-		657ABF5327A3FB30009A12D0 /* ListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4927A3FB30009A12D0 /* ListingCollectionViewCell.swift */; };
 		657ABF5427A3FB30009A12D0 /* HomeModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4B27A3FB30009A12D0 /* HomeModuleInteractor.swift */; };
 		657ABF5527A3FB30009A12D0 /* HomeModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4D27A3FB30009A12D0 /* HomeModuleRouter.swift */; };
 		657ABF5627A3FB30009A12D0 /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ABF4E27A3FB30009A12D0 /* HomeFlowCoordinator.swift */; };
@@ -100,6 +99,13 @@
 		657AC34927A67A12009A12D0 /* OfferDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */; };
 		657AC34B27A67A44009A12D0 /* OfferInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */; };
 		657AC34D27A682C2009A12D0 /* OfferLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */; };
+		657AC35127A69835009A12D0 /* OfferShiftsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35027A69835009A12D0 /* OfferShiftsTableViewCell.swift */; };
+		657AC35327A699B5009A12D0 /* ShiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35227A699B5009A12D0 /* ShiftCollectionViewCell.swift */; };
+		657AC35527A6A2FF009A12D0 /* OfferCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35427A6A2FF009A12D0 /* OfferCollectionViewCellViewModel.swift */; };
+		657AC35927A6A3BD009A12D0 /* HomeModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35827A6A3BD009A12D0 /* HomeModuleInteractorTests.swift */; };
+		657AC35B27A6A3EE009A12D0 /* MockHomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35A27A6A3EE009A12D0 /* MockHomeInteractorOutput.swift */; };
+		657AC35E27A6A434009A12D0 /* FuncCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35D27A6A434009A12D0 /* FuncCheck.swift */; };
+		657AC36027A6A63F009A12D0 /* MockOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AC35F27A6A63F009A12D0 /* MockOffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,7 +163,6 @@
 		657ABF4427A3FB30009A12D0 /* HomeModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModulePresenter.swift; sourceTree = "<group>"; };
 		657ABF4627A3FB30009A12D0 /* ListingsCollectionDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsCollectionDatasource.swift; sourceTree = "<group>"; };
 		657ABF4727A3FB30009A12D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		657ABF4927A3FB30009A12D0 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
 		657ABF4B27A3FB30009A12D0 /* HomeModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModuleInteractor.swift; sourceTree = "<group>"; };
 		657ABF4D27A3FB30009A12D0 /* HomeModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModuleRouter.swift; sourceTree = "<group>"; };
 		657ABF4E27A3FB30009A12D0 /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -219,6 +224,13 @@
 		657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoTableViewCell.swift; sourceTree = "<group>"; };
 		657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferLocationTableViewCell.swift; sourceTree = "<group>"; };
+		657AC35027A69835009A12D0 /* OfferShiftsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferShiftsTableViewCell.swift; sourceTree = "<group>"; };
+		657AC35227A699B5009A12D0 /* ShiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCollectionViewCell.swift; sourceTree = "<group>"; };
+		657AC35427A6A2FF009A12D0 /* OfferCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		657AC35827A6A3BD009A12D0 /* HomeModuleInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleInteractorTests.swift; sourceTree = "<group>"; };
+		657AC35A27A6A3EE009A12D0 /* MockHomeInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeInteractorOutput.swift; sourceTree = "<group>"; };
+		657AC35D27A6A434009A12D0 /* FuncCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncCheck.swift; sourceTree = "<group>"; };
+		657AC35F27A6A63F009A12D0 /* MockOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +291,8 @@
 		657ABED827A3DD20009A12D0 /* JobbieTests */ = {
 			isa = PBXGroup;
 			children = (
+				657AC35C27A6A428009A12D0 /* Common */,
+				657AC35627A6A381009A12D0 /* Scenes */,
 				657ABF8F27A44BAF009A12D0 /* Services */,
 				657ABF8427A44359009A12D0 /* Mocks */,
 				657ABED927A3DD20009A12D0 /* JobbieTests.swift */,
@@ -490,7 +504,7 @@
 				657AC33E27A674B4009A12D0 /* ShiftCell.swift */,
 				657AC33827A674B4009A12D0 /* SingleShiftCell.swift */,
 				657AC33A27A674B4009A12D0 /* SingleShiftView.swift */,
-				657ABF4927A3FB30009A12D0 /* ListingCollectionViewCell.swift */,
+				657AC35427A6A2FF009A12D0 /* OfferCollectionViewCellViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -556,6 +570,7 @@
 				657ABF8527A44367009A12D0 /* MockURLSession.swift */,
 				657ABF8B27A44ADA009A12D0 /* MockLookupService.swift */,
 				657ABF8D27A44B2A009A12D0 /* MockResponse.swift */,
+				657AC35F27A6A63F009A12D0 /* MockOffer.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -665,6 +680,8 @@
 				657AC34827A67A12009A12D0 /* OfferDescriptionTableViewCell.swift */,
 				657AC34A27A67A44009A12D0 /* OfferInfoTableViewCell.swift */,
 				657AC34C27A682C1009A12D0 /* OfferLocationTableViewCell.swift */,
+				657AC35027A69835009A12D0 /* OfferShiftsTableViewCell.swift */,
+				657AC35227A699B5009A12D0 /* ShiftCollectionViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -675,6 +692,31 @@
 				657ABFD427A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		657AC35627A6A381009A12D0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				657AC35727A6A386009A12D0 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		657AC35727A6A386009A12D0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				657AC35827A6A3BD009A12D0 /* HomeModuleInteractorTests.swift */,
+				657AC35A27A6A3EE009A12D0 /* MockHomeInteractorOutput.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		657AC35C27A6A428009A12D0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				657AC35D27A6A434009A12D0 /* FuncCheck.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -860,6 +902,7 @@
 				657ABFDC27A5D1B4009A12D0 /* ListingDetailsModuleRouter.swift in Sources */,
 				657ABFAD27A45A0F009A12D0 /* AuthModuleRouter.swift in Sources */,
 				657ABF9D27A4539C009A12D0 /* LoadingViewController.swift in Sources */,
+				657AC35527A6A2FF009A12D0 /* OfferCollectionViewCellViewModel.swift in Sources */,
 				657ABF3C27A3F8A5009A12D0 /* Assets.swift in Sources */,
 				657ABF9F27A45747009A12D0 /* LookupServiceResponse.swift in Sources */,
 				657AC34D27A682C2009A12D0 /* OfferLocationTableViewCell.swift in Sources */,
@@ -876,6 +919,7 @@
 				657ABFAF27A45A22009A12D0 /* AuthViewController.swift in Sources */,
 				657ABF0427A3DDBB009A12D0 /* DefaultWireframe.swift in Sources */,
 				657ABF3927A3F85B009A12D0 /* BaseCoordinator.swift in Sources */,
+				657AC35327A699B5009A12D0 /* ShiftCollectionViewCell.swift in Sources */,
 				657ABF6E27A3FEC1009A12D0 /* BreakType.swift in Sources */,
 				657ABF1727A3DDFD009A12D0 /* Types.swift in Sources */,
 				657ABF5927A3FB90009A12D0 /* Reusable.swift in Sources */,
@@ -919,7 +963,6 @@
 				657AC34427A674B4009A12D0 /* MultipleShiftsView.swift in Sources */,
 				657ABF7327A3FFF6009A12D0 /* Environment.swift in Sources */,
 				657ABFA327A4590C009A12D0 /* AuthModuleBuilder.swift in Sources */,
-				657ABF5327A3FB30009A12D0 /* ListingCollectionViewCell.swift in Sources */,
 				657AC34127A674B4009A12D0 /* SingleShiftView.swift in Sources */,
 				657ABF3E27A3F8D9009A12D0 /* Failure.swift in Sources */,
 				657ABF7A27A42A82009A12D0 /* Request.swift in Sources */,
@@ -928,6 +971,7 @@
 				657ABF1027A3DDC7009A12D0 /* EmptyView.swift in Sources */,
 				657AC34B27A67A44009A12D0 /* OfferInfoTableViewCell.swift in Sources */,
 				657AC34227A674B4009A12D0 /* LocationView.swift in Sources */,
+				657AC35127A69835009A12D0 /* OfferShiftsTableViewCell.swift in Sources */,
 				657ABEFF27A3DDA5009A12D0 /* AppServicesManager.swift in Sources */,
 				657ABF3327A3F80D009A12D0 /* L10n.swift in Sources */,
 			);
@@ -937,13 +981,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657AC36027A6A63F009A12D0 /* MockOffer.swift in Sources */,
 				657ABF9A27A44EBC009A12D0 /* AuthServicesIntegrationTests.swift in Sources */,
+				657AC35B27A6A3EE009A12D0 /* MockHomeInteractorOutput.swift in Sources */,
 				657ABF9227A44BC5009A12D0 /* LookupServiceIntegrationTests.swift in Sources */,
 				657ABF8E27A44B2A009A12D0 /* MockResponse.swift in Sources */,
 				657ABF8627A44367009A12D0 /* MockURLSession.swift in Sources */,
 				657ABEDA27A3DD20009A12D0 /* JobbieTests.swift in Sources */,
 				657ABF8C27A44ADA009A12D0 /* MockLookupService.swift in Sources */,
 				657ABFDD27A67015009A12D0 /* MockURLSessionDataTask.swift in Sources */,
+				657AC35E27A6A434009A12D0 /* FuncCheck.swift in Sources */,
+				657AC35927A6A3BD009A12D0 /* HomeModuleInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

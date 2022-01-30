@@ -18,7 +18,7 @@ final class LookupServiceIntegrationTests: XCTestCase {
         service = LookupServiceImpl(requestDispatcher: NetworkRequestDispatcher(session: URLSession.shared, tokenClosure: { AppEnvironment.userSession.accessToken }))
     }
 
-    func test_detail_whenNoAuthTokenIsProvided_shouldFail() {
+    func test_fetchOffers_whenNoAuthTokenIsProvided_shouldFail() {
         // GIVEN
         let expectation = self.expectation(description: "lookupCall")
         var error: Error?

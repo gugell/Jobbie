@@ -24,6 +24,6 @@ final class LoadingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        UI { [weak self] in  self?.activityIndicator.startAnimating() }
+        onMain { [weak self] in  self?.activityIndicator.startAnimating() }
     }
 }

@@ -106,7 +106,9 @@ final class OfferLocationTableViewCell: UITableViewCell, Reusable, BindableType 
         let coordinates = CLLocationCoordinate2DMake(viewModel.coordinates.latitude, viewModel.coordinates.longitude)
         let regionDistance = CLLocationDistance(10000)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates, addressDictionary: nil))
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let regionSpan = MKCoordinateRegion(center: coordinates,
+                                            latitudinalMeters: regionDistance,
+                                            longitudinalMeters: regionDistance)
         mapItem.name = viewModel.formattedAddress
         let launchOptions = [
             MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),

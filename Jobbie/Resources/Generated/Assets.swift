@@ -22,6 +22,7 @@ public enum Assets {
   public static let clock = ImageAsset(name: "clock")
   public static let explore = ImageAsset(name: "explore")
   public static let job = ImageAsset(name: "job")
+  public static let personAvatar = ImageAsset(name: "person_avatar")
   public static let pin = ImageAsset(name: "pin")
   public static let profile = ImageAsset(name: "profile")
   public static let task = ImageAsset(name: "task")

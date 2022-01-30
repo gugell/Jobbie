@@ -10,7 +10,6 @@ import UIKit
 final class ListingsCollectionDatasource: UICollectionViewDiffableDataSource<Int, OfferCollectionViewCellViewModel> {
 
     init(collectionView: UICollectionView) {
-        collectionView.register(cellType: ListingCollectionViewCell.self)
         collectionView.register(cellType: SingleShiftCell.self)
         collectionView.register(cellType: MultipleShiftsCell.self)
 
