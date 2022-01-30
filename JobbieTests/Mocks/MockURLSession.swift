@@ -14,7 +14,7 @@ final class MockURLSession: NetworkSession {
     var dataTaskResponseStub: (Data?, URLResponse?, Error?) = (nil, nil, nil)
 
     func executeTask(with request: URLRequest,
-                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task {
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> SessionTask {
         completionHandler(dataTaskResponseStub.0,
                           dataTaskResponseStub.1,
                           dataTaskResponseStub.2)

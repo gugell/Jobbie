@@ -31,14 +31,11 @@ final class HomeModuleInteractor: HomeModuleInteractorInput {
 
     func reloadData() {
         lookupService.fetchOffers(query: .init(offset: nil)) { [weak self] result in
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                switch result {
-                case .success(let response):
-                    self?.output?.interactorDidFinishLoading(response.offers)
-                case .failure(let error):
-                    self?.output?.interactorDidFailWithError(error.localizedDescription)
-                }
+            switch result {
+            case .success(let response):
+                self?.output?.interactorDidFinishLoading(response.offers)
+            case .failure(let error):
+                self?.output?.interactorDidFailWithError(error.localizedDescription)
             }
         }
     }

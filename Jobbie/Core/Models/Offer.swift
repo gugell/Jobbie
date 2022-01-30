@@ -9,7 +9,6 @@
 import Foundation
 
 struct Offer: Codable {
-
   var id: String
   var jobMatchUuid: String
   var jobCategoryKey: String
@@ -27,5 +26,4 @@ struct Offer: Codable {
   var shifts: [Shift]
   var pricingTables: [PricingTable]
   var offerCategory: String
-
 }

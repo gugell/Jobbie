@@ -10,11 +10,14 @@ import XCTest
 final class AuthServicesIntegrationTests: XCTestCase {
 
     var service: AuthServicesImpl!
+    var dispatcher: NetworkRequestDispatcher!
 
     override func setUp() {
         super.setUp()
 
-        service = AuthServicesImpl(requestDispatcher: NetworkRequestDispatcher(session: URLSession.shared))
+        dispatcher = NetworkRequestDispatcher(session: URLSession.shared,
+                                              tokenClosure: { nil })
+        service = AuthServicesImpl(requestDispatcher: dispatcher)
     }
 
     func test_signIn_whenCorrectCredentialsAreProvided_shouldSucceed() {

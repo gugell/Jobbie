@@ -22,10 +22,11 @@ public struct Environment {
          baseURL: URL = URL(string: "https://staging-main.zenjob.org")!) {
         self.baseURL = baseURL
         self.userSession = userSession
+        // TODO: Inject real dispatcher if the API will fail
         let requestDispatcher = NetworkRequestDispatcher(session: URLSession.shared,
                                                          tokenClosure: { [weak userSession] in
             userSession?.accessToken })
-        self.lookupService = lookupService ?? LookupServiceImpl(requestDispatcher: MockRequestDispatcher())
-        self.authService = AuthServicesImpl(requestDispatcher: MockRequestDispatcher())
+        self.lookupService = lookupService ?? LookupServiceImpl(requestDispatcher: StubRequestDispatcher())
+        self.authService = AuthServicesImpl(requestDispatcher: StubRequestDispatcher())
     }
 }

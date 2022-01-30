@@ -12,8 +12,8 @@ typealias Completion<T> = (Response<T>) -> Void
 typealias TokenClosure = () -> String?
 
 protocol RequestDispatcher {
-    func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> Task
-    func dataTask(with request: Request, completion: @escaping Completion<Data>) -> Task?
+    func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> SessionTask
+    func dataTask(with request: Request, completion: @escaping Completion<Data>) -> SessionTask?
 }
 
 final class NetworkRequestDispatcher: RequestDispatcher {
@@ -25,13 +25,13 @@ final class NetworkRequestDispatcher: RequestDispatcher {
         self.tokenClosure = tokenClosure
     }
 
-    func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> Task {
+    func dataTask(with request: URLRequest, completion: @escaping Completion<Data>) -> SessionTask {
         return session.executeTask(with: request) { [weak self] data, response, error in
             self?.handle(data, response: response, error: error, completion: completion)
         }
     }
 
-    func dataTask(with request: Request, completion: @escaping Completion<Data>) -> Task? {
+    func dataTask(with request: Request, completion: @escaping Completion<Data>) -> SessionTask? {
         do {
             var urlRequest = try request.asUrlRequest()
             if let authorizationType = request.authorizationType,

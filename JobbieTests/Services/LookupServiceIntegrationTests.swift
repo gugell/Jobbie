@@ -15,7 +15,7 @@ final class LookupServiceIntegrationTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        service = LookupServiceImpl(requestDispatcher: NetworkRequestDispatcher(session: URLSession.shared))
+        service = LookupServiceImpl(requestDispatcher: NetworkRequestDispatcher(session: URLSession.shared, tokenClosure: { AppEnvironment.userSession.accessToken }))
     }
 
     func test_detail_whenNoAuthTokenIsProvided_shouldFail() {

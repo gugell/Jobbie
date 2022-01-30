@@ -16,11 +16,11 @@ extension ColorAsset {
     }
 }
 
-// extension ImageAsset {
-//    func callAsFunction() -> Image {
-//        return image
-//    }
-// }
+ extension ImageAsset {
+    func callAsFunction() -> Image {
+        return image
+    }
+ }
 
 func UI(_ closure: @escaping () -> Void) {
     DispatchQueue.main.async {

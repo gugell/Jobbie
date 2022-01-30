@@ -7,13 +7,20 @@
 
 import Foundation
 
-struct JSONResponseDecoder {
+final class JSONResponseDecoder {
+
+    private lazy var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+
+        return decoder
+    }()
 
     func mapObject<T: Codable>(ofType type: T.Type,
                                from data: Data,
                                at path: String? = nil) throws -> T {
         do {
-            return try JSONDecoder().decode(T.self, from: try getJsonData(from: data, path))
+            return try decoder.decode(T.self, from: try getJsonData(from: data, path))
         } catch {
             debugPrint(error.localizedDescription)
             debugPrint((error as? DecodingError).debugDescription)
@@ -26,7 +33,7 @@ struct JSONResponseDecoder {
                               path: String? = nil) throws -> [T] {
 
         do {
-            return try JSONDecoder().decode([T].self, from: try getJsonData(from: data, path))
+            return try decoder.decode([T].self, from: try getJsonData(from: data, path))
         } catch {
             debugPrint(error)
             throw DecodingFailure.jsonMapping(error)

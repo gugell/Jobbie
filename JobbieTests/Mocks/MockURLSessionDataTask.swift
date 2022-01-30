@@ -6,8 +6,9 @@
 //
 
 import Foundation
+@testable import Jobbie
 
-final class MockURLSessionDataTask: Task {
+final class MockURLSessionDataTask: SessionTask {
     private (set) var resumeWasCalled = false
     private (set) var cancelWasCalled = false
 
